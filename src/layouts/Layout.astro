@@ -1,33 +1,72 @@
 ---
 import AppFooter from "../components/AppFooter.astro";
-import AppHeader from "../components/AppHeader.astro"
+import AppHeader from "../components/AppHeader.astro";
 ---
-
 
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<meta name="description" content="Template built with tailwindcss using Tailus blocks v2">
-		<title>Tailus astro theme</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <meta
+      name="description"
+      content="Template built with tailwindcss using Tailus blocks v2"
+    />
+    <title>Tailus astro theme</title>
 
-		<link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600;700&display=swap" rel="stylesheet">
-	</head>
-	<body class="bg-white dark:bg-gray-900">
-		<AppHeader/>
-		<slot />
-		<AppFooter/>
-	</body>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-white dark:bg-gray-900">
+    <AppHeader />
+    <slot />
+    <AppFooter />
+    <style>
+      /* Register our custom font family and tell the browser where to find it. */
+
+      @font-face {
+        font-family: "Tajwal";
+        src: url("/fonts/Tajwal-ExtraLight.ttf") format("ttf");
+        font-weight: lighter;
+        font-display: swap;
+      }
+      @font-face {
+        font-family: "Tajwal";
+        src: url("/fonts/Tajwal-Light.ttf") format("ttf");
+        font-weight: normal;
+        font-display: swap;
+      }
+      @font-face {
+        font-family: "Tajwal";
+        src: url("/fonts/Tajwal-Regular.ttf") format("ttf");
+        font-weight: normal;
+        font-display: swap;
+      }
+      @font-face {
+        font-family: "Tajwal";
+        src: url("/fonts/bold.ttf") format("ttf");
+        font-weight: bold;
+        font-display: swap;
+      }
+      @font-face {
+        font-family: "Tajwal";
+        src: url("/fonts/ExtraBold.ttf") format("ttf");
+        font-weight: bolder;
+        font-display: swap;
+      }
+
+      html {
+        font-family: "Tajwal";
+      }
+
+      body {
+        margin: 0;
+        font-family: "Tajwal";
+      }
+    </style>
+  </body>
 </html>
-<style>
-	html {
-		font-family: Urbanist, sans-serif;
-	}
-
-	body {
-		margin: 0;
-	}
-</style>
